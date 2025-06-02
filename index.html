@@ -6,366 +6,452 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Landing Page</title>
   <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="landing.css"> 
+<!-- <link rel="stylesheet" href="landing.css"> -->
 </head>
 
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <span class="ms-2">MinecraftSite</span>
+  <header class="bg-gray-900 border-b-4 border-green-600 shadow-lg">
+    <nav class="container mx-auto flex flex-wrap items-center justify-between px-6 py-4 select-none">
+      <a href="#" class="flex items-center text-2xl font-extrabold tracking-wider font-mono text-green-400 drop-shadow-md hover:text-green-500 transition-colors duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-2 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 7v10a1 1 0 001 1h16a1 1 0 001-1V7a1 1 0 00-1-1H4a1 1 0 00-1 1z" />
+        </svg>
+        <span>MinecraftSite</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
-        <span class="navbar-toggler-icon"></span>
+  
+      <button id="menu-toggle" class="block md:hidden focus:outline-none text-green-500 hover:text-green-400 transition-colors duration-300" aria-label="Toggle menu">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
       </button>
-      <div class="collapse navbar-collapse justify-content-center" id="menuPrincipal">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#secao1">Início</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#secao2">Galeria</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#secao3">Sobre</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#secao4">Contato</a>
-          </li>
+  
+      <div id="menu" class="hidden w-full md:flex md:items-center md:w-auto">
+        <ul class="flex flex-col md:flex-row md:space-x-8 mt-5 md:mt-0 text-center font-semibold text-green-400 drop-shadow-md">
+          <li><a href="#secao1" class="block py-2 px-5 rounded hover:bg-green-700 hover:text-green-200 transition-colors duration-300">Início</a></li>
+          <li><a href="#secao2" class="block py-2 px-5 rounded hover:bg-green-700 hover:text-green-200 transition-colors duration-300">Galeria</a></li>
+          <li><a href="#secao3" class="block py-2 px-5 rounded hover:bg-green-700 hover:text-green-200 transition-colors duration-300">Sobre</a></li>
+          <li><a href="#secao4" class="block py-2 px-5 rounded hover:bg-green-700 hover:text-green-200 transition-colors duration-300">Contato</a></li>
         </ul>
       </div>
     </nav>
   </header>
-
- <section class="container my-4 p-4 rounded shadow" id="secao1">
-  <h1 class="text-center mb-5">O Que Minecraft Pode Nos Ensinar?</h1>
   
-  <div class="row row-cols-1 row-cols-md-3 g-4">
   
-    <div class="col">
-      <div class="card h-100 bg-dark text-light border-success">
-        <div class="card-body">
-          <h5 class="card-title text-success">Criatividade</h5>
-          <p class="card-text">Construa desde casas simples até computadores funcionais com redstone.</p>
-        </div>
+  <section id="secao1" class="container mx-auto my-8 p-8 rounded-lg shadow-2xl bg-gray-900 text-gray-100">
+    <h1 class="text-center text-4xl font-extrabold mb-10 tracking-wide text-green-400 drop-shadow-md">
+      O Que Minecraft Pode Nos Ensinar?
+    </h1>
+  
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-gray-800 rounded-lg border-l-8 border-green-500 p-6 shadow-lg flex flex-col h-full">
+        <h5 class="text-2xl font-bold text-green-400 mb-3 drop-shadow-sm">Criatividade</h5>
+        <p class="text-gray-300 leading-relaxed flex-grow">
+          Construa desde casas simples até computadores funcionais com redstone.
+        </p>
+      </div>
+  
+      <div class="bg-gray-800 rounded-lg border-l-8 border-blue-600 p-6 shadow-lg flex flex-col h-full">
+        <h5 class="text-2xl font-bold text-blue-400 mb-3 drop-shadow-sm">Lógica</h5>
+        <p class="text-gray-300 leading-relaxed flex-grow">
+          Sistemas de redstone introduzem conceitos básicos de programação.
+        </p>
+      </div>
+  
+      <div class="bg-gray-800 rounded-lg border-l-8 border-yellow-500 p-6 shadow-lg flex flex-col h-full">
+        <h5 class="text-2xl font-bold text-yellow-400 mb-3 drop-shadow-sm">Colaboração</h5>
+        <p class="text-gray-300 leading-relaxed flex-grow">
+          Trabalho em equipe em servidores multiplayer para mega construções.
+        </p>
       </div>
     </div>
-
-    <div class="col">
-      <div class="card h-100 bg-dark text-light border-primary">
-        <div class="card-body">
-          <h5 class="card-title text-primary">Lógica</h5>
-          <p class="card-text">Sistemas de redstone introduzem conceitos básicos de programação.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card h-100 bg-dark text-light border-warning">
-        <div class="card-body">
-          <h5 class="card-title text-warning">Colaboração</h5>
-          <p class="card-text">Trabalho em equipe em servidores multiplayer para mega construções.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-    <h2>Contém diversos Personagens!</h2>
-    <img src="personagens.png" alt="Personagens do Minecraft">
+  
+    <h2 class="text-3xl font-semibold mt-14 mb-6 text-green-400 drop-shadow-md tracking-wide">
+      Contém diversos Personagens!
+    </h2>
+  
+    <img src="personagens.png" alt="Personagens do Minecraft" class="w-full max-w-3xl mx-auto rounded-lg shadow-2xl border-4 border-green-600" />
   </section>
+  
 
 </body>
 </html>
-<section class="container my-4 p-4 rounded shadow" id="secao2">
-  <h2 class="text-center text-neon mb-5">O Que Oferecemos</h2>
 
-  <div id="carrossel-guia" class="carousel slide mb-5" data-bs-ride="carousel">
-    <div class="carousel-inner bg-dark p-4 rounded text-light">
+<section class="max-w-6xl mx-auto my-8 p-6 rounded-lg shadow-lg bg-white" id="secao2">
+  <h2 class="text-center text-green-500 mb-10 font-extrabold text-4xl">O Que Oferecemos</h2>
+
+  <!-- Carrossel Guia -->
+  <div id="carrossel-guia" class="carousel slide mb-10" data-bs-ride="carousel">
+    <div class="carousel-inner bg-gray-900 p-6 rounded-lg text-white">
       <div class="carousel-item active text-center">
-        <h3>Guia de Iniciação ao Minecraft</h3>
+        <h3 class="text-2xl font-semibold mb-2">Guia de Iniciação ao Minecraft</h3>
         <p>Entenda os princípios do jogo, da coleta de recursos até seu primeiro abrigo.</p>
-        <img src="pegandoMadeira.png" class="d-block mx-auto" alt="pegando madeira" style="max-width: 60%;">
+        <img src="pegandoMadeira.png" alt="pegando madeira" class="mx-auto mt-4 max-w-[60%] rounded-md shadow-md">
       </div>
       <div class="carousel-item text-center">
-        <h3>Exploração Básica</h3>
+        <h3 class="text-2xl font-semibold mb-2">Exploração Básica</h3>
         <p>Aprenda a identificar biomas, encontrar carvão e sobreviver à primeira noite.</p>
-        <img src="explorando.webp" class="d-block mx-auto" alt="exploração" style="max-width: 60%;">
+        <img src="explorando.webp" alt="exploração" class="mx-auto mt-4 max-w-[60%] rounded-md shadow-md">
       </div>
       <div class="carousel-item text-center">
-        <h3>Construindo com Criatividade</h3>
+        <h3 class="text-2xl font-semibold mb-2">Construindo com Criatividade</h3>
         <p>Dicas para começar a construir casas seguras e funcionais.</p>
-        <img src="construcao.webp" class="d-block mx-auto" alt="construção" style="max-width: 60%;">
+        <img src="construcao.webp" alt="construção" class="mx-auto mt-4 max-w-[60%] rounded-md shadow-md">
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carrossel-guia" data-bs-slide="prev">
+
+    <button class="absolute top-1/2 left-4 -translate-y-1/2 bg-white/20 hover:bg-white/40 p-3 rounded-full" 
+            type="button" data-bs-target="#carrossel-guia" data-bs-slide="prev">
       <span class="carousel-control-prev-icon"></span>
-      <span class="visually-hidden">Anterior</span>
+      <span class="sr-only">Anterior</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carrossel-guia" data-bs-slide="next">
+    <button class="absolute top-1/2 right-4 -translate-y-1/2 bg-white/20 hover:bg-white/40 p-3 rounded-full" 
+            type="button" data-bs-target="#carrossel-guia" data-bs-slide="next">
       <span class="carousel-control-next-icon"></span>
-      <span class="visually-hidden">Próximo</span>
+      <span class="sr-only">Próximo</span>
     </button>
   </div>
 
-  <div id="carrossel-redstone" class="carousel slide mb-5" data-bs-ride="carousel">
-    <div class="carousel-inner bg-dark p-4 rounded text-light">
+  <!-- Carrossel Redstone -->
+  <div id="carrossel-redstone" class="carousel slide mb-10" data-bs-ride="carousel">
+    <div class="carousel-inner bg-gray-900 p-6 rounded-lg text-white">
       <div class="carousel-item active text-center">
-        <h3>Aprendizado com Redstone</h3>
+        <h3 class="text-2xl font-semibold mb-2">Aprendizado com Redstone</h3>
         <p>Introdução prática aos circuitos lógicos e sistemas automatizados dentro do Minecraft.</p>
-        <img src="redstone.jpg" class="d-block mx-auto" alt="redstone" style="max-width: 60%;">
+        <img src="redstone.jpg" alt="redstone" class="mx-auto mt-4 max-w-[60%] rounded-md shadow-md">
       </div>
       <div class="carousel-item text-center">
-        <h3>Criação de Farms Automáticas</h3>
+        <h3 class="text-2xl font-semibold mb-2">Criação de Farms Automáticas</h3>
         <p>Aprenda a construir sistemas automáticos para coleta de recursos.</p>
-        <img src="farm.jpg" class="d-block mx-auto" alt="farm automática" style="max-width: 60%;">
+        <img src="farm.jpg" alt="farm automática" class="mx-auto mt-4 max-w-[60%] rounded-md shadow-md">
       </div>
       <div class="carousel-item text-center">
-        <h3>Decoração Avançada</h3>
+        <h3 class="text-2xl font-semibold mb-2">Decoração Avançada</h3>
         <p>Técnicas profissionais para decorar suas construções.</p>
-        <img src="decoracao.jpg" class="d-block mx-auto" alt="decoração" style="max-width: 60%;">
+        <img src="decoracao.jpg" alt="decoração" class="mx-auto mt-4 max-w-[60%] rounded-md shadow-md">
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carrossel-redstone" data-bs-slide="prev">
+
+    <button class="absolute top-1/2 left-4 -translate-y-1/2 bg-white/20 hover:bg-white/40 p-3 rounded-full" 
+            type="button" data-bs-target="#carrossel-redstone" data-bs-slide="prev">
       <span class="carousel-control-prev-icon"></span>
-      <span class="visually-hidden">Anterior</span>
+      <span class="sr-only">Anterior</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carrossel-redstone" data-bs-slide="next">
+    <button class="absolute top-1/2 right-4 -translate-y-1/2 bg-white/20 hover:bg-white/40 p-3 rounded-full" 
+            type="button" data-bs-target="#carrossel-redstone" data-bs-slide="next">
       <span class="carousel-control-next-icon"></span>
-      <span class="visually-hidden">Próximo</span>
+      <span class="sr-only">Próximo</span>
     </button>
   </div>
 
-  <div id="carrossel-projetos" class="carousel slide mb-5" data-bs-ride="carousel">
-    <div class="carousel-inner bg-dark p-4 rounded text-light">
+  <!-- Carrossel Projetos -->
+  <div id="carrossel-projetos" class="carousel slide mb-10" data-bs-ride="carousel">
+    <div class="carousel-inner bg-gray-900 p-6 rounded-lg text-white">
       <div class="carousel-item active text-center">
-        <h3>Projetos Colaborativos</h3>
+        <h3 class="text-2xl font-semibold mb-2">Projetos Colaborativos</h3>
         <p>Desenvolvimento de habilidades de trabalho em equipe com construções coletivas.</p>
-        <img src="trabalhandoJuntos.jpg" class="d-block mx-auto" alt="trabalhando juntos" style="max-width: 60%;">
+        <img src="trabalhandoJuntos.jpg" alt="trabalhando juntos" class="mx-auto mt-4 max-w-[60%] rounded-md shadow-md">
       </div>
       <div class="carousel-item text-center">
-        <h3>Cidades Temáticas</h3>
+        <h3 class="text-2xl font-semibold mb-2">Cidades Temáticas</h3>
         <p>Criação de cidades com temas específicos, desenvolvendo planejamento urbano.</p>
-        <img src="cidadeTematica.webp" class="d-block mx-auto" alt="cidade temática" style="max-width: 60%;">
+        <img src="cidadeTematica.webp" alt="cidade temática" class="mx-auto mt-4 max-w-[60%] rounded-md shadow-md">
       </div>
       <div class="carousel-item text-center">
-        <h3>Mega Construções</h3>
+        <h3 class="text-2xl font-semibold mb-2">Mega Construções</h3>
         <p>Projetos em larga escala que desafiam a criatividade e o trabalho em grupo.</p>
-        <img src="megaConstrucao.jpg" class="d-block mx-auto" alt="mega construção" style="max-width: 60%;">
+        <img src="megaConstrucao.jpg" alt="mega construção" class="mx-auto mt-4 max-w-[60%] rounded-md shadow-md">
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carrossel-projetos" data-bs-slide="prev">
+
+    <button class="absolute top-1/2 left-4 -translate-y-1/2 bg-white/20 hover:bg-white/40 p-3 rounded-full" 
+            type="button" data-bs-target="#carrossel-projetos" data-bs-slide="prev">
       <span class="carousel-control-prev-icon"></span>
-      <span class="visually-hidden">Anterior</span>
+      <span class="sr-only">Anterior</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carrossel-projetos" data-bs-slide="next">
+    <button class="absolute top-1/2 right-4 -translate-y-1/2 bg-white/20 hover:bg-white/40 p-3 rounded-full" 
+            type="button" data-bs-target="#carrossel-projetos" data-bs-slide="next">
       <span class="carousel-control-next-icon"></span>
-      <span class="visually-hidden">Próximo</span>
+      <span class="sr-only">Próximo</span>
     </button>
   </div>
 
-  <div id="carrossel-sobrevivencia" class="carousel slide mb-5" data-bs-ride="carousel">
-    <div class="carousel-inner bg-dark p-4 rounded text-light">
+  <!-- Carrossel Sobrevivência -->
+  <div id="carrossel-sobrevivencia" class="carousel slide mb-10" data-bs-ride="carousel">
+    <div class="carousel-inner bg-gray-900 p-6 rounded-lg text-white">
       <div class="carousel-item active text-center">
-        <h3>Desafios de Sobrevivência</h3>
+        <h3 class="text-2xl font-semibold mb-2">Desafios de Sobrevivência</h3>
         <p>Planejamento estratégico e gestão de recursos em cenários difíceis.</p>
-        <img src="inventario2.webp" class="d-block mx-auto" alt="inventário" style="max-width: 60%;">
+        <img src="inventario2.webp" alt="inventário" class="mx-auto mt-4 max-w-[60%] rounded-md shadow-md">
       </div>
       <div class="carousel-item text-center">
-        <h3>Sobrevivência Hardcore</h3>
+        <h3 class="text-2xl font-semibold mb-2">Sobrevivência Hardcore</h3>
         <p>Dicas avançadas para sobreviver no modo hardcore com apenas uma vida.</p>
-        <img src="hardcore.webp" class="d-block mx-auto" alt="sobrevivência hardcore" style="max-width: 60%;">
+        <img src="hardcore.webp" alt="sobrevivência hardcore" class="mx-auto mt-4 max-w-[60%] rounded-md shadow-md">
       </div>
       <div class="carousel-item text-center">
-        <h3>Biomas Hostis</h3>
+        <h3 class="text-2xl font-semibold mb-2">Biomas Hostis</h3>
         <p>Como sobreviver no Nether e End, os biomas mais perigosos do jogo.</p>
-        <img src="nether.jpg" class="d-block mx-auto" alt="bioma nether" style="max-width: 60%;">
+        <img src="nether.jpg" alt="bioma nether" class="mx-auto mt-4 max-w-[60%] rounded-md shadow-md">
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carrossel-sobrevivencia" data-bs-slide="prev">
+
+    <button class="absolute top-1/2 left-4 -translate-y-1/2 bg-white/20 hover:bg-white/40 p-3 rounded-full" 
+            type="button" data-bs-target="#carrossel-sobrevivencia" data-bs-slide="prev">
       <span class="carousel-control-prev-icon"></span>
-      <span class="visually-hidden">Anterior</span>
+      <span class="sr-only">Anterior</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carrossel-sobrevivencia" data-bs-slide="next">
+    <button class="absolute top-1/2 right-4 -translate-y-1/2 bg-white/20 hover:bg-white/40 p-3 rounded-full" 
+            type="button" data-bs-target="#carrossel-sobrevivencia" data-bs-slide="next">
       <span class="carousel-control-next-icon"></span>
-      <span class="visually-hidden">Próximo</span>
+      <span class="sr-only">Próximo</span>
     </button>
   </div>
 
-  <div id="carrossel-educativo" class="carousel slide mb-5" data-bs-ride="carousel">
-    <div class="carousel-inner bg-dark p-4 rounded text-light">
+  <!-- Carrossel Educativo -->
+  <div id="carrossel-educativo" class="carousel slide mb-10" data-bs-ride="carousel">
+    <div class="carousel-inner bg-gray-900 p-6 rounded-lg text-white">
       <div class="carousel-item active text-center">
-        <h3>Matemática no Minecraft</h3>
+        <h3 class="text-2xl font-semibold mb-2">Matemática no Minecraft</h3>
         <p>Aprenda geometria e proporções construindo no jogo.</p>
-        <img src="matematica.jpg" class="d-block mx-auto" alt="matemática no minecraft" style="max-width: 60%;">
+        <img src="matematica.jpg" alt="matemática no minecraft" class="mx-auto mt-4 max-w-[60%] rounded-md shadow-md">
       </div>
       <div class="carousel-item text-center">
-        <h3>História Viva</h3>
+        <h3 class="text-2xl font-semibold mb-2">História Viva</h3>
         <p>Reconstrução de monumentos históricos para aprendizado imersivo.</p>
-        <img src="historia.webp" class="d-block mx-auto" alt="monumentos históricos" style="max-width: 60%;">
+        <img src="historia.webp" alt="monumentos históricos" class="mx-auto mt-4 max-w-[60%] rounded-md shadow-md">
       </div>
       <div class="carousel-item text-center">
-        <h3>Ciências Práticas</h3>
+        <h3 class="text-2xl font-semibold mb-2">Ciências Práticas</h3>
         <p>Explorações de física, química e biologia usando o jogo.</p>
-        <img src="ciencia2.webp" class="d-block mx-auto" alt="experimentos científicos" style="max-width: 60%;">
+        <img src="ciencia2.webp" alt="experimentos científicos" class="mx-auto mt-4 max-w-[60%] rounded-md shadow-md">
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carrossel-educativo" data-bs-slide="prev">
+
+    <button class="absolute top-1/2 left-4 -translate-y-1/2 bg-white/20 hover:bg-white/40 p-3 rounded-full" 
+            type="button" data-bs-target="#carrossel-educativo" data-bs-slide="prev">
       <span class="carousel-control-prev-icon"></span>
-      <span class="visually-hidden">Anterior</span>
+      <span class="sr-only">Anterior</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carrossel-educativo" data-bs-slide="next">
+    <button class="absolute top-1/2 right-4 -translate-y-1/2 bg-white/20 hover:bg-white/40 p-3 rounded-full" 
+            type="button" data-bs-target="#carrossel-educativo" data-bs-slide="next">
       <span class="carousel-control-next-icon"></span>
-      <span class="visually-hidden">Próximo</span>
+      <span class="sr-only">Próximo</span>
     </button>
   </div>
 
-  <div id="carrossel-mecanicas" class="carousel slide mb-5" data-bs-ride="carousel">
-    <div class="carousel-inner bg-dark p-4 rounded text-light">
+  <!-- Carrossel Mecânicas -->
+  <div id="carrossel-mecanicas" class="carousel slide mb-10" data-bs-ride="carousel">
+    <div class="carousel-inner bg-gray-900 p-6 rounded-lg text-white">
       <div class="carousel-item active text-center">
-        <h3>Análise de Mecânicas do Jogo</h3>
+        <h3 class="text-2xl font-semibold mb-2">Análise de Mecânicas do Jogo</h3>
         <p>Como o jogo simula sistemas reais e estimula pensamento sistêmico.</p>
-        <img src="diagrama.webp" class="d-block mx-auto" alt="diagrama de redstone" style="max-width: 60%;">
+        <img src="diagrama.webp" alt="diagrama de redstone" class="mx-auto mt-4 max-w-[60%] rounded-md shadow-md">
       </div>
       <div class="carousel-item text-center">
-        <h3>Física no Minecraft</h3>
+        <h3 class="text-2xl font-semibold mb-2">Física no Minecraft</h3>
         <p>Gravidade, fluidos e outras leis físicas simplificadas no jogo.</p>
-        <img src="fisica.jpg" class="d-block mx-auto" alt="física no jogo" style="max-width: 60%;">
+        <img src="fisica.jpg" alt="física no jogo" class="mx-auto mt-4 max-w-[60%] rounded-md shadow-md">
       </div>
       <div class="carousel-item text-center">
-        <h3>Economia Virtual</h3>
+        <h3 class="text-2xl font-semibold mb-2">Economia Virtual</h3>
         <p>Sistemas de troca e valor de itens como base para conceitos econômicos.</p>
-        <img src="economia.jpg" class="d-block mx-auto" alt="economia no minecraft" style="max-width: 60%;">
+        <img src="economia.jpg" alt="economia no minecraft" class="mx-auto mt-4 max-w-[60%] rounded-md shadow-md">
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carrossel-mecanicas" data-bs-slide="prev">
+
+    <button class="absolute top-1/2 left-4 -translate-y-1/2 bg-white/20 hover:bg-white/40 p-3 rounded-full" 
+            type="button" data-bs-target="#carrossel-mecanicas" data-bs-slide="prev">
       <span class="carousel-control-prev-icon"></span>
-      <span class="visually-hidden">Anterior</span>
+      <span class="sr-only">Anterior</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carrossel-mecanicas" data-bs-slide="next">
+    <button class="absolute top-1/2 right-4 -translate-y-1/2 bg-white/20 hover:bg-white/40 p-3 rounded-full" 
+            type="button" data-bs-target="#carrossel-mecanicas" data-bs-slide="next">
       <span class="carousel-control-next-icon"></span>
-      <span class="visually-hidden">Próximo</span>
+      <span class="sr-only">Próximo</span>
     </button>
   </div>
-
 </section>
+<section class="py-16 bg-gray-900 text-gray-200" id="secao3">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-4xl font-extrabold text-green-400 mb-10 drop-shadow-md tracking-wide">
+      Sobre Este Projeto
+    </h2>
 
-<section class="container my-4 p-4 rounded shadow" id="secao3">
-  <h2>Sobre Este Projeto</h2>
+    <h3 class="text-2xl font-semibold text-green-400 mt-10 mb-3 drop-shadow-sm">
+      Como Começou
+    </h3>
+    <p class="text-gray-300 leading-relaxed mb-6">
+      Este projeto nasceu em 2024, inspirado pelo lançamento do filme Minecraft. Começou como um simples teste para
+      explorar como o jogo poderia ser usado em atividades educativas.
+    </p>
 
-  <h3>Como Começou</h3>
-  <p>Este projeto nasceu em 2024, inspirado pelo lançamento do filme Minecraft. Começou como um simples teste para
-    explorar como o jogo poderia ser usado em atividades educativas.</p>
+    <h3 class="text-2xl font-semibold text-green-400 mt-10 mb-3 drop-shadow-sm">
+      Minha Jornada
+    </h3>
+    <p class="text-gray-300 leading-relaxed mb-6">
+      Desenvolvi este projeto sozinha, desde a concepção inicial até a implementação. Foi uma experiência de
+      aprendizado onde combinei minha paixão por Minecraft com interesse em métodos de ensino inovadores.
+    </p>
 
-  <h3>Minha Jornada</h3>
-  <p>Desenvolvi este projeto sozinha, desde a concepção inicial até a implementação. Foi uma experiência de
-    aprendizado onde combinei minha paixão por Minecraft com interesse em métodos de ensino inovadores.</p>
-
-  <h3>O Experimento</h3>
-  <p>A ideia inicial era testar se:</p>
-  <ul>
-    <li>O jogo realmente poderia ensinar conceitos práticos</li>
-    <li>Seriam possíveis atividades estruturadas dentro do sandbox</li>
-    <li>Os resultados justificariam o tempo investido</li>
-  </ul>
-
-  <h3>Descobertas</h3>
-  <p>Através deste projeto pessoal, descobri que:</p>
-  <ul>
-    <li>Minecraft é excelente para ensinar geometria básica</li>
-    <li>A construção colaborativa desenvolve habilidades sociais</li>
-    <li>O sistema de crafting ensina sequência lógica</li>
-    <li>Os jogadores aprendem sem perceber que estão estudando</li>
-  </ul>
-
-  <h3>Próximas Etapas</h3>
-  <p>Mesmo sendo um projeto individual, pretendo:</p>
-  <ul>
-    <li>Documentar melhor minhas observações</li>
-    <li>Criar tutoriais para outros interessados</li>
-    <li>Testar com pequenos grupos</li>
-    <li>Compartilhar meus resultados na comunidade</li>
-  </ul>
-</section>
-<section class="container my-4 p-4 rounded shadow" id="secao4">
-  <h2>Entre em Contato</h2>
-
-  <div class="contact-info">
-    <h3>Informações para Contato</h3>
-    <p>Quer conversar sobre o projeto ou colaborar de alguma forma?</p>
-    <ul>
-      <li><strong>Email:</strong> contato@projetominecraft.com</li>
-      <li><strong>Discord:</strong> ProjetoMinecraft#1234</li>
-      <li><strong>Servidor Minecraft:</strong> projetominecraft.com</li>
+    <h3 class="text-2xl font-semibold text-green-400 mt-10 mb-3 drop-shadow-sm">
+      O Experimento
+    </h3>
+    <p class="text-gray-300 leading-relaxed mb-2">
+      A ideia inicial era testar se:
+    </p>
+    <ul class="list-disc list-inside text-gray-400 mb-6 space-y-1">
+      <li>O jogo realmente poderia ensinar conceitos práticos</li>
+      <li>Seriam possíveis atividades estruturadas dentro do sandbox</li>
+      <li>Os resultados justificariam o tempo investido</li>
     </ul>
-  </div>
 
-  <div class="contact-form">
-    <h3>Envie Sua Mensagem</h3>
-    <form>
-      <div class="form-group">
-        <label for="nome">Seu Nome:</label>
-        <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+    <h3 class="text-2xl font-semibold text-green-400 mt-10 mb-3 drop-shadow-sm">
+      Descobertas
+    </h3>
+    <p class="text-gray-300 leading-relaxed mb-2">
+      Através deste projeto pessoal, descobri que:
+    </p>
+    <ul class="list-disc list-inside text-gray-400 mb-6 space-y-1">
+      <li>Minecraft é excelente para ensinar geometria básica</li>
+      <li>A construção colaborativa desenvolve habilidades sociais</li>
+      <li>O sistema de crafting ensina sequência lógica</li>
+      <li>Os jogadores aprendem sem perceber que estão estudando</li>
+    </ul>
+
+    <h3 class="text-2xl font-semibold text-green-400 mt-10 mb-3 drop-shadow-sm">
+      Próximas Etapas
+    </h3>
+    <p class="text-gray-300 leading-relaxed mb-2">
+      Mesmo sendo um projeto individual, pretendo:
+    </p>
+    <ul class="list-disc list-inside text-gray-400 space-y-1">
+      <li>Documentar melhor minhas observações</li>
+      <li>Criar tutoriais para outros interessados</li>
+      <li>Testar com pequenos grupos</li>
+      <li>Compartilhar meus resultados na comunidade</li>
+    </ul>
+  </div><section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="mb-16">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Próximas Etapas</h2>
+        <p class="text-gray-600 mb-4">Mesmo sendo um projeto individual, pretendo:</p>
+        <ul class="list-disc pl-6 space-y-2 text-gray-700">
+          <li>Documentar melhor minhas observações</li>
+          <li>Criar tutoriais para outros interessados</li>
+          <li>Testar com pequenos grupos</li>
+          <li>Compartilhar meus resultados na comunidade</li>
+        </ul>
       </div>
-
-      <div class="form-group">
-        <label for="email">Seu Email:</label>
-        <input type="email" id="email" name="email" placeholder="seu@email.com">
-      </div>
-
-      <div class="form-group">
-        <label for="assunto">Assunto:</label>
-        <select id="assunto" name="assunto">
-          <option value="duvida">Dúvida sobre o projeto</option>
-          <option value="sugestao">Sugestão de melhoria</option>
-          <option value="colaborar">Quero colaborar</option>
-          <option value="outro">Outro</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="mensagem">Sua Mensagem:</label>
-        <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem aqui..." rows="4"></textarea>
-      </div>
-
-      <div class="form-submit">
-        <button type="submit">Enviar Mensagem</button>
-      </div>
-    </form>
-  </div>
-</section>
-<footer>
-
-  <h3>Conecte-se</h3>
-
-  <a href="https://www.instagram.com/minecraft/" target="_blank">
-    <button><i data-feather="instagram"></i></button>
-  </a>
-
-  <a href="https://github.com/" target="_blank">
-    <button><i data-feather="github"></i></button>
-  </a>
-
-  <a href="https://www.facebook.com/minecraft/?locale=pt_BRt" target="_blank">
-    <button><i data-feather="facebook"></i></button>
-  </a>
-
-  <a href="https://minecraft.fandom.com/wiki/Minecraft_Wiki" target="_blank">
-    <button><i data-feather="map"></i></button>
-  </a>
-
-  <a href="https://www.minecraft.net/pt-br/download" target="_blank">
-    <button><i data-feather="download"></i></button>
-  </a>
   
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <h3 class="text-2xl font-semibold text-gray-800 mb-4">Informações para Contato</h3>
+          <p class="text-gray-600 mb-6">Quer conversar sobre o projeto ou colaborar de alguma forma?</p>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <span class="font-medium text-gray-800 mr-2">Email:</span>
+              <span class="text-gray-600">contato@projetominecraft.com</span>
+            </li>
+            <li class="flex items-start">
+              <span class="font-medium text-gray-800 mr-2">Discord:</span>
+              <span class="text-gray-600">ProjetoMinecraft#1234</span>
+            </li>
+            <li class="flex items-start">
+              <span class="font-medium text-gray-800 mr-2">Servidor Minecraft:</span>
+              <span class="text-gray-600">projetominecraft.com</span>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <h3 class="text-2xl font-semibold text-gray-800 mb-6">Envie Sua Mensagem</h3>
+          <form class="space-y-5">
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">Seu Nome:</label>
+              <input type="text" placeholder="Digite seu nome" 
+                     class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">Seu Email:</label>
+              <input type="email" placeholder="seu@email.com" 
+                     class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">Assunto:</label>
+              <select class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option>Dúvida sobre o projeto</option>
+                <option>Sugestão de melhoria</option>
+                <option>Quero colaborar</option>
+                <option>Outro</option>
+              </select>
+            </div>
+            
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">Sua Mensagem:</label>
+              <textarea rows="4" placeholder="Escreva sua mensagem aqui..." 
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+            </div>
+            
+            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-md transition">
+              Enviar Mensagem
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      feather.replace();
-    });
-  </script>
+<footer class="bg-gray-900 text-white px-6 py-10">
+  <h3 class="text-2xl font-bold mb-6 text-center">Conecte-se</h3>
 
-  <p>&copy; 2025 Projeto Minecraft. Todos os direitos reservados a Mojang Studios.</p>
+  <div class="flex flex-wrap justify-center gap-6 mb-8">
+    <a href="https://www.instagram.com/minecraft/" target="_blank"
+       class="group w-14 h-14 flex items-center justify-center rounded-full bg-pink-600 hover:bg-pink-700 transition transform hover:scale-110">
+      <i data-feather="instagram" class="w-6 h-6 group-hover:scale-110 transition-transform"></i>
+    </a>
+
+    <a href="https://github.com/" target="_blank"
+       class="group w-14 h-14 flex items-center justify-center rounded-full bg-gray-700 hover:bg-gray-600 transition transform hover:scale-110">
+      <i data-feather="github" class="w-6 h-6 group-hover:scale-110 transition-transform"></i>
+    </a>
+
+    <a href="https://www.facebook.com/minecraft/?locale=pt_BR" target="_blank"
+       class="group w-14 h-14 flex items-center justify-center rounded-full bg-blue-600 hover:bg-blue-700 transition transform hover:scale-110">
+      <i data-feather="facebook" class="w-6 h-6 group-hover:scale-110 transition-transform"></i>
+    </a>
+
+    <a href="https://minecraft.fandom.com/wiki/Minecraft_Wiki" target="_blank"
+       class="group w-14 h-14 flex items-center justify-center rounded-full bg-green-600 hover:bg-green-700 transition transform hover:scale-110">
+      <i data-feather="map" class="w-6 h-6 group-hover:scale-110 transition-transform"></i>
+    </a>
+  </div>
+
+  <div class="flex justify-center">
+    <a href="https://www.minecraft.net/pt-br/download" target="_blank"
+       class="group w-14 h-14 flex items-center justify-center rounded-full bg-indigo-600 hover:bg-indigo-700 transition transform hover:scale-110 shadow-lg">
+      <svg class="w-6 h-6 animate-spin text-white" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2">
+        <circle class="opacity-25" cx="12" cy="12" r="10" />
+        <path class="opacity-75" d="M4 12a8 8 0 018-8v8H4z" />
+      </svg>
+    </a>
+  </div>
+
+  <p class="mt-8 text-center text-gray-400">&copy; 2025 Projeto Minecraft. Todos os direitos reservados a Mojang Studios.</p>
+</footer>
+
+<script src="https://unpkg.com/feather-icons"></script>
+<script>
+  feather.replace();
+</script>
+
 
   <!DOCTYPE html>
   <html lang="pt-BR">
@@ -378,64 +464,70 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
 
-  <body>
-    <h1 style="font-family: 'Minecraft'; color: #55ff55; text-shadow: 2px 2px 0 #000;">Minecraft Surpresa</h1>
+  <style>
+    @font-face {
+        font-family: 'Minecraft';
+        src: url('https://fonts.cdnfonts.com/css/minecraft-4') format('woff2');
+    }
+</style>
+<body class="bg-gray-900 min-h-screen flex flex-col items-center justify-center p-4">
+<h1 class="font-['Minecraft'] text-[#55ff55] text-4xl mb-8 [text-shadow:_2px_2px_0_#000]">Minecraft Surpresa</h1>
 
-    <button id="btn-surpresa" class="botao-surpresa" data-bs-toggle="popover" data-bs-custom-class="minecraft-popover"
-      data-bs-title="Dica Secreta!" data-bs-content="Você descobriu um easter egg!">
-      Surpresa
-    </button>
+<button id="btn-surpresa" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+    Surpresa
+</button>
 
-    <div id="mensagem-surpresa" class="mensagem-surpresa">
-      <h3 class="titulo-erro">ALERTA DO SISTEMA</h3>
-      <div class="mensagem-principal">
+<div id="mensagem-surpresa" class="hidden bg-gray-800 border-2 border-red-500 rounded-lg p-6 max-w-md mt-8 text-center text-white">
+    <h3 class="text-2xl font-bold text-red-500 mb-4">ALERTA DO SISTEMA</h3>
+    <div class="mb-4">
         <p>Detectamos uma avaliação suspeita:</p>
-        <p class="destaque-avaliacao">NOTA A</p>
+        <p class="text-4xl font-bold text-green-400 my-2">NOTA A</p>
         <p>Classificação acima dos padrões esperados</p>
-      </div>
-      <div class="mensagem-secundaria">
-        <p>Você concedeu: <span>A</span></p>
-        <p>Quando nosso desempenho merece: <span class="nota-merecida">A+++</span></p>
-      </div>
-      <p>(Mas aceitaremos humildemente este A)</p>
-      <button id="fechar-surpresa" class="fechar-btn">Fechar</button>
     </div>
+    <div class="mb-4">
+        <p>Você concedeu: <span class="font-bold">A</span></p>
+        <p>Quando nosso desempenho merece: <span class="font-bold text-yellow-300">A+++</span></p>
+    </div>
+    <p class="text-gray-300 mb-4">(Mas aceitaremos humildemente este A)</p>
+    <button id="fechar-surpresa" class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded">Fechar</button>
+</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
         const btnSurpresa = document.getElementById('btn-surpresa');
         const mensagemSurpresa = document.getElementById('mensagem-surpresa');
         const btnFechar = document.getElementById('fechar-surpresa');
 
-        const popover = new bootstrap.Popover(btnSurpresa, {
-          trigger: 'click',
-          html: true,
-          placement: 'bottom'
+        // Tooltip personalizado no lugar do popover
+        btnSurpresa.addEventListener('mouseenter', function() {
+            // Criar tooltip
+            const tooltip = document.createElement('div');
+            tooltip.className = 'absolute bg-gray-700 text-white px-3 py-1 rounded text-sm';
+            tooltip.textContent = 'Dica Secreta!';
+            tooltip.style.top = '-40px';
+            tooltip.style.left = '50%';
+            tooltip.style.transform = 'translateX(-50%)';
+            
+            // Adicionar ao botão
+            btnSurpresa.style.position = 'relative';
+            btnSurpresa.appendChild(tooltip);
+            
+            // Remover após 2 segundos
+            setTimeout(() => {
+                tooltip.remove();
+            }, 2000);
         });
 
-
         btnSurpresa.addEventListener('click', function () {
-          mensagemSurpresa.style.display = 'block';
-
-          setTimeout(() => {
-            popover.hide();
-          }, 1500);
+            mensagemSurpresa.classList.remove('hidden');
+            mensagemSurpresa.classList.add('block');
         });
 
         btnFechar.addEventListener('click', function () {
-          mensagemSurpresa.style.display = 'none';
+            mensagemSurpresa.classList.add('hidden');
+            mensagemSurpresa.classList.remove('block');
         });
-      });
-    </script>
-  </body>
-
-  </html>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-    crossorigin="anonymous"></script>
-  </body>
-
-  </html>
+    });
+</script>
+</body>
+</html>
