@@ -302,7 +302,7 @@
       <div class="space-y-8">
         <div>
           <h3 class="text-2xl font-semibold text-green-300 mb-4">Como Começou</h3>
-          <p class="text-gray-300">Este projeto nasceu em 2024, inspirado pelo lançamento do filme Minecraft. Começou como um simples teste para explorar como o jogo poderia ser usado em atividades educativas.</p>
+          <p class="text-gray-300">Este projeto nasceu em 2025, inspirado pelo lançamento do filme Minecraft. Começou como um simples teste para explorar como o jogo poderia ser usado em atividades educativas.</p>
         </div>
 
         <div>
@@ -454,68 +454,106 @@
   </footer>
 </section>
 
+
 <script src="https://unpkg.com/feather-icons"></script>
 <script>feather.replace();</script>
 </section>
 
-
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Surpresa Minecraft</title>
+  <title>Surpresa Minecraft Animada</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
+  <style>
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      75% { transform: translateX(5px); }
+    }
+    .animate-bounce { animation: bounce 1s infinite; }
+    .animate-shake { animation: shake 0.5s; }
+  </style>
 </head>
 
 <body class="bg-gray-900 min-h-screen flex flex-col items-center justify-center p-4">
   <div class="text-center">
-    <h1 class="font-['Minecraft'] text-[#55ff55] text-4xl mb-8 [text-shadow:_2px_2px_0_#000]">
+    <h1 class="font-['Minecraft'] text-[#55ff55] text-4xl mb-8 [text-shadow:_2px_2px_0_#000] animate-bounce">
       Minecraft Surpresa
     </h1>
     
-    <div class="flex justify-center">
-      <button id="btn-surpresa" 
-              class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition">
-        Surpresa
-      </button>
-    </div>
+    <button id="btn-surpresa" 
+            class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg 
+                   transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg 
+                   hover:shadow-green-500/50">
+      ✨ Clique para Surpresa! ✨
+    </button>
 
-    <div id="mensagem-surpresa" 
-         style="display: none;"
-         class="bg-gray-800 border-2 border-red-500 rounded-lg p-6 max-w-md mt-8 text-center text-white">
-      <h3 class="text-2xl font-bold text-red-500 mb-4">ALERTA DO SISTEMA</h3>
-      <div class="mb-4">
-        <p>Detectamos uma avaliação suspeita:</p>
-        <p class="text-4xl font-bold text-green-400 my-2">NOTA A</p>
-        <p>Classificação acima dos padrões esperados</p>
+    <!-- Section que aparece com animação -->
+    <section id="section-surpresa" 
+             class="hidden mt-8 bg-gray-800 border-4 border-green-500 rounded-lg p-6 max-w-md 
+                    text-white transform transition-all duration-500">
+      <div class="flex justify-between items-start mb-4">
+        <h2 class="text-2xl font-bold text-green-400">
+          🎉 Segredo Desbloqueado!
+        </h2>
+        <button id="fechar-section" class="text-gray-400 hover:text-white transition">
+          ✕
+        </button>
       </div>
-      <div class="mb-4">
-        <p>Você concedeu: <span class="font-bold">A</span></p>
-        <p>Quando nosso desempenho merece: <span class="font-bold text-yellow-300">A+++</span></p>
+      
+      <div class="bg-gray-700 p-4 rounded-lg mb-4 border-l-4 border-yellow-400">
+        <p class="text-yellow-300 font-bold">💎 Dica Profissional:</p>
+        <p class="text-gray-300 mt-2">Pressione <kbd class="bg-gray-900 px-2 py-1 rounded">F3</kbd> + <kbd class="bg-gray-900 px-2 py-1 rounded">T</kbd> para recarregar texturas!</p>
       </div>
-      <p class="text-gray-300 mb-4">(Mas aceitaremos humildemente este A)</p>
-      <button id="fechar-surpresa" class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded">
-        Fechar
-      </button>
-    </div>
+      
+      <div class="grid grid-cols-3 gap-2 mt-4">
+        <div class="block-item bg-green-900 aspect-square rounded-sm flex items-center justify-center">🌲</div>
+        <div class="block-item bg-blue-900 aspect-square rounded-sm flex items-center justify-center">💧</div>
+        <div class="block-item bg-yellow-900 aspect-square rounded-sm flex items-center justify-center">🪓</div>
+        <div class="block-item bg-red-900 aspect-square rounded-sm flex items-center justify-center">🧨</div>
+        <div class="block-item bg-gray-900 aspect-square rounded-sm flex items-center justify-center">⛏️</div>
+        <div class="block-item bg-purple-900 aspect-square rounded-sm flex items-center justify-center">🍄</div>
+      </div>
+    </section>
   </div>
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const btnSurpresa = document.getElementById('btn-surpresa');
-      const mensagemSurpresa = document.getElementById('mensagem-surpresa');
-      const btnFechar = document.getElementById('fechar-surpresa');
+      const sectionSurpresa = document.getElementById('section-surpresa');
+      const btnFechar = document.getElementById('fechar-section');
+      const blockItems = document.querySelectorAll('.block-item');
 
-      // Mostrar mensagem
+      // Mostrar section com animação
       btnSurpresa.addEventListener('click', function() {
-        mensagemSurpresa.style.display = 'block';
+        sectionSurpresa.classList.remove('hidden');
+        sectionSurpresa.classList.add('animate__animated', 'animate__fadeInUp');
+        
+        // Efeito de clique no botão
+        this.classList.add('animate-shake');
+        setTimeout(() => this.classList.remove('animate-shake'), 500);
       });
 
-      // Fechar mensagem
+      // Fechar section
       btnFechar.addEventListener('click', function() {
-        mensagemSurpresa.style.display = 'none';
+        sectionSurpresa.classList.add('hidden');
+      });
+
+      // Efeito nos blocos
+      blockItems.forEach(block => {
+        block.addEventListener('click', function() {
+          this.classList.add('animate-shake');
+          setTimeout(() => this.classList.remove('animate-shake'), 500);
+          
+          // Efeito sonoro simulado
+          console.log("Som de bloco clicado!");
+        });
       });
     });
   </script>
