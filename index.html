@@ -14,7 +14,7 @@
 </head><body class="bg-gray-900">
   <header class="bg-gray-900 border-b-2 border-green-600 shadow-md sticky top-0 z-50">
     <nav class="container mx-auto flex flex-wrap items-center justify-between px-4 py-3">
-      <!-- Logo Compacta -->
+
       <a href="#" class="flex items-center space-x-2 group">
         <div class="p-1.5 bg-green-600 rounded-md transition duration-200">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -24,14 +24,12 @@
         <span class="text-xl font-bold text-green-400 tracking-tight">MinecraftSite</span>
       </a>
 
-      <!-- Botão Menu Mobile -->
       <button id="menu-toggle" class="md:hidden focus:outline-none p-1.5 rounded-md bg-gray-800 hover:bg-gray-700 transition">
         <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
-
-      <!-- Menu Principal Compacto -->
+     
       <div id="menu" class="hidden w-full md:flex md:items-center md:w-auto">
         <ul class="flex flex-col md:flex-row space-y-1 md:space-y-0 md:space-x-4 mt-3 md:mt-0">
           <li>
@@ -101,7 +99,6 @@
 <section class="max-w-6xl mx-auto my-8 p-6 rounded-lg shadow-lg bg-gray-900 text-gray-200" id="secao2">
   <h2 class="text-center text-green-400 mb-10 font-extrabold text-4xl">O Que Oferecemos</h2>
 
-  <!-- Carrossel Guia -->
   <div id="carrossel-guia" class="carousel slide mb-10 relative" data-bs-ride="carousel">
     <div class="carousel-inner bg-gray-800 p-6 rounded-lg text-white border border-gray-700">
       <div class="carousel-item active text-center">
@@ -133,7 +130,6 @@
     </button>
   </div>
 
-  <!-- Carrossel Redstone -->
   <div id="carrossel-redstone" class="carousel slide mb-10 relative" data-bs-ride="carousel">
     <div class="carousel-inner bg-gray-800 p-6 rounded-lg text-white border border-gray-700">
       <div class="carousel-item active text-center">
@@ -165,7 +161,6 @@
     </button>
   </div>
 
-  <!-- Carrossel Projetos -->
   <div id="carrossel-projetos" class="carousel slide mb-10 relative" data-bs-ride="carousel">
     <div class="carousel-inner bg-gray-800 p-6 rounded-lg text-white border border-gray-700">
       <div class="carousel-item active text-center">
@@ -197,7 +192,6 @@
     </button>
   </div>
 
-  <!-- Carrossel Sobrevivência -->
   <div id="carrossel-sobrevivencia" class="carousel slide mb-10 relative" data-bs-ride="carousel">
     <div class="carousel-inner bg-gray-800 p-6 rounded-lg text-white border border-gray-700">
       <div class="carousel-item active text-center">
@@ -229,7 +223,6 @@
     </button>
   </div>
 
-  <!-- Carrossel Educativo -->
   <div id="carrossel-educativo" class="carousel slide mb-10 relative" data-bs-ride="carousel">
     <div class="carousel-inner bg-gray-800 p-6 rounded-lg text-white border border-gray-700">
       <div class="carousel-item active text-center">
@@ -261,7 +254,6 @@
     </button>
   </div>
 
-  <!-- Carrossel Mecânicas -->
   <div id="carrossel-mecanicas" class="carousel slide mb-10 relative" data-bs-ride="carousel">
     <div class="carousel-inner bg-gray-800 p-6 rounded-lg text-white border border-gray-700">
       <div class="carousel-item active text-center">
@@ -293,9 +285,10 @@
     </button>
   </div>
 </section>
+
 <section class="py-12 bg-gray-900 text-gray-200" id="secao3">
   <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-12">
-    <!-- Sobre o Projeto -->
+ 
     <div class="max-w-4xl mx-auto w-full">
       <h2 class="text-4xl font-bold text-green-400 mb-8">Sobre Este Projeto</h2>
 
@@ -481,37 +474,6 @@
   </style>
 </head>
 
-<body class="bg-gray-900 min-h-screen flex flex-col items-center justify-center p-4">
-  <div class="text-center">
-    <h1 class="font-['Minecraft'] text-[#55ff55] text-4xl mb-8 [text-shadow:_2px_2px_0_#000] animate-bounce">
-      Minecraft Surpresa
-    </h1>
-    
-    <button id="btn-surpresa" 
-            class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg 
-                   transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg 
-                   hover:shadow-green-500/50">
-      ✨ Clique para Surpresa! ✨
-    </button>
-
-    <!-- Section que aparece com animação -->
-    <section id="section-surpresa" 
-             class="hidden mt-8 bg-gray-800 border-4 border-green-500 rounded-lg p-6 max-w-md 
-                    text-white transform transition-all duration-500">
-      <div class="flex justify-between items-start mb-4">
-        <h2 class="text-2xl font-bold text-green-400">
-          🎉 Segredo Desbloqueado!
-        </h2>
-        <button id="fechar-section" class="text-gray-400 hover:text-white transition">
-          ✕
-        </button>
-      </div>
-      
-      <div class="bg-gray-700 p-4 rounded-lg mb-4 border-l-4 border-yellow-400">
-        <p class="text-yellow-300 font-bold">💎 Dica Profissional:</p>
-        <p class="text-gray-300 mt-2">Pressione <kbd class="bg-gray-900 px-2 py-1 rounded">F3</kbd> + <kbd class="bg-gray-900 px-2 py-1 rounded">T</kbd> para recarregar texturas!</p>
-      </div>
-      
       <div class="grid grid-cols-3 gap-2 mt-4">
         <div class="block-item bg-green-900 aspect-square rounded-sm flex items-center justify-center">🌲</div>
         <div class="block-item bg-blue-900 aspect-square rounded-sm flex items-center justify-center">💧</div>
@@ -522,40 +484,23 @@
       </div>
     </section>
   </div>
-
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const btnSurpresa = document.getElementById('btn-surpresa');
-      const sectionSurpresa = document.getElementById('section-surpresa');
-      const btnFechar = document.getElementById('fechar-section');
-      const blockItems = document.querySelectorAll('.block-item');
+    document.getElementById('btn-surpresa').addEventListener('click', function() {
+      document.getElementById('section-surpresa').classList.toggle('hidden');
+      this.classList.toggle('animate-shake');
+    });
 
-      // Mostrar section com animação
-      btnSurpresa.addEventListener('click', function() {
-        sectionSurpresa.classList.remove('hidden');
-        sectionSurpresa.classList.add('animate__animated', 'animate__fadeInUp');
-        
-        // Efeito de clique no botão
-        this.classList.add('animate-shake');
-        setTimeout(() => this.classList.remove('animate-shake'), 500);
-      });
-
-      // Fechar section
-      btnFechar.addEventListener('click', function() {
-        sectionSurpresa.classList.add('hidden');
-      });
-
-      // Efeito nos blocos
-      blockItems.forEach(block => {
-        block.addEventListener('click', function() {
-          this.classList.add('animate-shake');
-          setTimeout(() => this.classList.remove('animate-shake'), 500);
-          
-          // Efeito sonoro simulado
-          console.log("Som de bloco clicado!");
-        });
+    document.getElementById('fechar-section').addEventListener('click', function() {
+      document.getElementById('section-surpresa').classList.add('hidden');
+      document.getElementById('btn-surpresa').classList.remove('animate-shake');
+    });
+    document.querySelectorAll('.block-item').forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('bg-green-500');
+        item.classList.toggle('bg-gray-900');
       });
     });
   </script>
-</body>
-</html>
+ 
+  </body>
+  </html>
